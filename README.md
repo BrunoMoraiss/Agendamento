@@ -1,5 +1,5 @@
-# Agendamento
-- Projeto criado para simular uma agenda, onde é possivel verificar fazer agendamentos, verificar os dias que já possui agendamentos, os horarios, nome da pessoa que tem horario marcado e a descrição.
+# 🗓️ Agendamento
+- Projeto criado para simular uma agenda, onde é possivel fazer agendamentos, verificar os dias que já possui agendamentos, os horarios, nome da pessoa que tem horario marcado e a descrição.
 ## Front-End
 - EJS - Utilizado como view engine para redenrização das paginas.
 - Bootstrap - Para estilização das paginas
@@ -12,7 +12,7 @@
 - NodeMailer - Utilizado para simular junto ao MailTrap como seria o envio de email as pessoas que tem horario agendado.
 ### Dev-Dependencies
 - Nodemon - Utilizado para manter o servidor rodando mesmo após modificação no código.
-## EndPoints
+## ☕ EndPoints
 ### GET /
 - Redenrização da view Index.
 #### Parametros
@@ -74,9 +74,20 @@ transporter.sendMail({
     console.log(err) // Caso haja um problema no envio do email
   })
 ```                    
- 
+# 💻 Pré-requisitos
+- Ter o banco MongoDB instalado.
+# 🚀 Instalando Agendamento 
+- Rodar o seguinte comando dentro do cmd ou powershell: 
+```
+npm install
+```
+- Dentro do arquivo Index.js (Está na raiz do projeto), a linha 16 está indicando a conexão ao mongoDB e o database. Após a `/` coloque o database que você criou para receber esse projeto.
+#### Exemplo: 
+```
+mongoose.connect("mongodb://127.0.0.1:27017/**SEU DATABASE**")
+```
 # Outras Informações 
-## Classe Service
+## Service
 - Utilizei um service para facilitar a comunicação com o banco de dados. Tornando assim o código mais limpo.
 #### Exemplo da classe Create (Utilizado para realizar a criação de agendamento no banco de dados): 
 ```
